@@ -1,8 +1,9 @@
-export interface Account {
-    phonenumber: string;
-    username: number;
+export interface User {
+    _id: string;
+    phone: number;
+    username: string;
     email: string;
     password: string;
-   _id: string
   }
+  
   

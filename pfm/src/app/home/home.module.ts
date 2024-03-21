@@ -18,6 +18,6 @@ import { AccountComponent } from './components/account/account.component';
 @NgModule({
   declarations: [DashboardComponent, ExpenseComponent, IncomeComponent, TransactionsComponent, ProfileComponent, AccountComponent],
   imports: [CommonModule, SharedModule, HomeRoutingModule , ReactiveFormsModule,RouterModule],
-  exports:[DashboardComponent,ExpenseComponent,IncomeComponent,TransactionsComponent,ProfileComponent]
+  exports:[DashboardComponent,ExpenseComponent,IncomeComponent,TransactionsComponent,ProfileComponent,AccountComponent]
 })
 export class HomeModule {}
