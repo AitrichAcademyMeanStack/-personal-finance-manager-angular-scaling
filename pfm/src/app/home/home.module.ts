@@ -10,12 +10,13 @@ import { TransactionsComponent } from './components/transactions/transactions.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RouterModule } from '@angular/router';
+import { AccountComponent } from './components/account/account.component';
 
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, ExpenseComponent, IncomeComponent, TransactionsComponent, ProfileComponent],
+  declarations: [DashboardComponent, ExpenseComponent, IncomeComponent, TransactionsComponent, ProfileComponent, AccountComponent],
   imports: [CommonModule, SharedModule, HomeRoutingModule , ReactiveFormsModule,RouterModule],
   exports:[DashboardComponent,ExpenseComponent,IncomeComponent,TransactionsComponent,ProfileComponent]
 })

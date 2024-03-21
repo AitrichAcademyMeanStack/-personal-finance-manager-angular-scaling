@@ -5,6 +5,7 @@ import { ExpenseComponent } from './expense/expense.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AccountComponent } from './components/account/account.component';
 
 const routes: Routes = [
   
@@ -14,7 +15,7 @@ const routes: Routes = [
     children: [
       { path: 'income', component: IncomeComponent },
       { path: 'expense', component: ExpenseComponent },
-     
+      { path: 'account', component: AccountComponent },
       {path:'profile',component:ProfileComponent},
       {path: '',component:TransactionsComponent},
     ],
