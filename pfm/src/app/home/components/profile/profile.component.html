@@ -1,4 +1,4 @@
-
+<!-- 
 
 <div class="container box mt-5">
   <div class="row">
@@ -29,4 +29,34 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+
+
+
+<div class="container box mt-5">
+  <div class="row">
+    <div class="col-lg-7">
+      <h2 class="mb-4">My Profile</h2> 
+      <form [formGroup]="myForm" (ngSubmit)="onsubmit()">
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" placeholder="firstname" formControlName="firstname">
+        </div>
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" placeholder="lastname" formControlName="lastname">
+        </div>
+       
+        <button type="submit" class="btn edit ml-2">Edit</button>
+      </form>
+    </div>
+    <div class="col-lg-5 mt-3 mt-lg-0">
+      <div class="col-12 mb-3">
+        <label for="profilePic" class="form-label">Profile Picture</label>
+        <input type="file" class="form-control" id="profilePic" accept="image/*">
+      </div>
+      <div class="col-12">
+        <img src="../../../../assets/img/avatar.png" class="rounded" alt="Profile Picture">
+      </div>
+    </div>
+  </div>
+</div> 
