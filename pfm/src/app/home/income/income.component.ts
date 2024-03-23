@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IncomeService } from '../services/income.service';
 import { Income } from '../models/Income';
 import { FinanceService } from '../services/finance.service';
+import { IncomeCategory } from '../models/IncomeCategory';
 
 @Component({
   selector: 'app-income',
@@ -12,6 +13,7 @@ import { FinanceService } from '../services/finance.service';
 export class IncomeComponent implements OnInit {
   income: Income | any;
   incomeForm!: FormGroup;
+  incCategory: IncomeCategory | any
 
   constructor(
     private fb: FormBuilder,
@@ -40,7 +42,7 @@ export class IncomeComponent implements OnInit {
   addIncome() {
     if (this.incomeForm.valid) {
       this.incomeService.addIncome(this.incomeForm.value).subscribe((res) => {
-        this.income = res
+        this.income = res;
         this.incomeForm.reset(); // clearing form
         this.getIncome(); // Updating DOM after Posting Data
         this.financeService.updateTotalIncome(); // Updating total Income
@@ -52,6 +54,7 @@ export class IncomeComponent implements OnInit {
   getIncome() {
     this.incomeService.fetchIncome().subscribe((res) => {
       this.income = res;
+      this.incomeCategory()
     });
   }
 
@@ -74,4 +77,11 @@ export class IncomeComponent implements OnInit {
     });
     return totalIncome;
   };
+
+  // Fetching expense category
+  incomeCategory() {
+    this.incomeService.getIncomeCategory().subscribe((res) => {
+      this.incCategory = res;
+    });
+  }
 }

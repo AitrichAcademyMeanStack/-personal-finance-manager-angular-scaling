@@ -16,9 +16,8 @@ export class TransactionsComponent implements OnInit {
   totalBalance: number = 0;
 
   @ViewChild('myChart') chartCanvas!: ElementRef<HTMLCanvasElement>;
-  constructor(
-    private financeService: FinanceService,
-  ) {}
+  @ViewChild('balanceChart') balanceChartCanvas!: ElementRef<HTMLCanvasElement>;
+  constructor(private financeService: FinanceService) {}
 
   totalExp: Expense | any;
 
@@ -40,6 +39,7 @@ export class TransactionsComponent implements OnInit {
       const incomes = financeData.map((data) => data.income);
 
       this.showChart(dates, expenses, incomes);
+      this.updateBalanceChart(dates);
     });
   }
 
@@ -49,8 +49,8 @@ export class TransactionsComponent implements OnInit {
   }
 
   //Configuring chart
-  showChart(dates: any[], expenses: any[] , incomes: any[]): void {
-  new Chart(this.chartCanvas.nativeElement, {
+  showChart(dates: any[], expenses: any[], incomes: any[]): void {
+    new Chart(this.chartCanvas.nativeElement, {
       type: 'line',
       data: {
         labels: dates,
@@ -69,7 +69,7 @@ export class TransactionsComponent implements OnInit {
           },
         ],
       },
-       options: {
+      options: {
         scales: {
           y: {
             beginAtZero: true,
@@ -77,5 +77,36 @@ export class TransactionsComponent implements OnInit {
         },
       },
     });
-    } 
+  }
+
+  updateBalanceChart(dates: any[]): void {
+    const balanceData = this.financeService.getTotalBalance();
+
+    new Chart(this.balanceChartCanvas.nativeElement, {
+      type: 'bar',
+      data: {
+        labels: dates,
+        datasets: [
+          {
+            maxBarThickness: 50,
+            label: 'Balance',
+            data: [balanceData],
+            backgroundColor: 'skyblue',
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function (value) {
+                return value;
+              },
+            },
+          },
+        }
+      },
+    });
+  }
 }

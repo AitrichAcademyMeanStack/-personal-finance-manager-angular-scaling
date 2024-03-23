@@ -13,17 +13,24 @@ export class ExpenseService {
 
   // Adding Expense
   addExpenditure(data: any){
-       return this.http.post(`${this.apiUrl}/api/v1/expense/user/65fab73f1c860ff5e300098f`, data);
+       return this.http.post(`${this.apiUrl}/api/v1/expense/user/65fcfde89b5da09acbaff243`, data);
   }
 
   // Fetching Expense
   fetchExpenditure(){
-       return this.http.get(`${this.apiUrl}/api/v1/expense/user/65fab73f1c860ff5e300098f`);
+       return this.http.get(`${this.apiUrl}/api/v1/expense/user/65fcfde89b5da09acbaff243`);
   } 
 
   // Deleting Expense
   deleteExpenditure(_id: string){
-   return this.http.delete(`${this.apiUrl}/api/v1/expense/${_id}/user/65fab73f1c860ff5e300098f`);
+   return this.http.delete(
+     `${this.apiUrl}/api/v1/expense/${_id}/user/65fcfde89b5da09acbaff243`
+   );
+   
+  }
 
+  // fetching expense category
+  getExpenseCategory(){
+   return this.http.get(`${this.apiUrl}/api/v1/expense-category`)
   }
 }
