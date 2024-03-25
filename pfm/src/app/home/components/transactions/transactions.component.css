@@ -1,8 +1,4 @@
-/* .dashboard .stats-con {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-} */
+/* 
  .chart-con {
   grid-column: 1 / 4;
    height: 400px;
@@ -13,6 +9,36 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 2rem;
+  background-color: aquamarine;
+}
+
+.amount-con .balance {
+  grid-column: 2 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.amount-con .income {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin-left: 100px;
+}
+
+
+.amount-con .expense {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
 }
 
 .chart-con .income,
@@ -28,6 +54,7 @@
   box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
   padding: 1rem;
+  
 }
 .chart-con .income,
 .expense,
@@ -36,13 +63,7 @@
   font-weight: 700;
 }
 
-.balance {
-  grid-column: 2 / 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .chart-con .balance p {
   color: #42AD00;
   opacity: 0.6;
@@ -65,8 +86,51 @@
 .innerLayout{
    padding: 2rem 1.5rem;
     width: 100%;
-    /* display: none; */
-    /* overflow: scroll; */
+   
     height: 650px;
-    /* overflow: hidden; */
+    
+} */
+
+.amount-con {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #f0eaeb;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-left:2px;
+  
+}
+
+.chart-con,
+.chart {
+  background: #fcf6f9;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 1rem;
+  
+}
+
+.income,
+.expense,
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balance p {
+  color: #42ad00;
+  opacity: 0.6;
+  font-size: 4.5rem;
+}
+
+
+
+.chart {
+  height: 400px; /* Adjust as needed */
 }
