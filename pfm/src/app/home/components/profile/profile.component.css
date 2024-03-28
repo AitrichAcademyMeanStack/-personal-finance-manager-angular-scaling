@@ -1,10 +1,28 @@
-.rounded{width: 200px;
-         height:200px;
-         
-        }
+
 
         .edit{background-color: #F54670;
               width: 200PX;
             height: 40px;
             border-radius: 30px;
             color: aliceblue;}
+
+
+            .profile-pic-container {
+              width: 150px;
+              height: 150px; 
+              overflow: hidden;
+              border-radius: 50%;
+            }
+            
+            .profile-pic {
+              width: 100%;
+              height: auto;
+              border-radius: 50%;
+            }
+
+            .btnp {background-color: #F54670;
+              width: 120PX;
+            height: 30px;
+            border-radius: 30px;
+            color: aliceblue;}
+            
