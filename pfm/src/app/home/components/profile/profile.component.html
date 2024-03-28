@@ -49,6 +49,11 @@
       </form>
     </div>
     <div class="col-lg-5 mt-3 mt-lg-0">
+
+      <div class="col-12 rounded profile-pic-container">
+        <img [src]="imageUrls" alt="Profile Picture" class="profile-pic">
+      </div>
+
       <div class="col-12 mb-3">
         <label for="profilePic" class="form-label">Upload Profile Picture</label>
         <form [formGroup]="picForm" (ngSubmit)="submitPic()">
@@ -62,9 +67,7 @@
         
       </div> -->
 
-      <div class="col-12 rounded profile-pic-container">
-        <img [src]="imageUrls" alt="Profile Picture" class="profile-pic">
-      </div>
+   
     </div>
   </div>
 </div>
