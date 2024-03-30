@@ -105,6 +105,8 @@
   
 }
 
+
+
 .chart-con,
 .chart {
   background: #fcf6f9;
@@ -124,12 +126,22 @@
 }
 
 .balance p {
-  color: #42ad00;
+  color: #F54670;
   opacity: 0.6;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
 }
 
+.expense p {
+  color: #F54670;
+  opacity: 0.6;
+  font-size: 3.5rem;
+}
 
+.income p {
+  color:  #F54670;
+  opacity: 0.6;
+  font-size: 3.5rem;
+}
 
 .chart {
   height: 400px; /* Adjust as needed */

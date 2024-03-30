@@ -236,23 +236,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  // getProfilePic() {
-  //   this.profileService.getProfilePic(this.userId).subscribe((res) => {
-  //     console.log(res);
-  //     // this.profile = res;
-  //     this.imageUrls = res.ProfilePicture; // Assuming the response contains the profile picture URL
-  //    console.log(this.imageUrls)
-  //   });
-  // }
-
-  // getProfilePic() {
-  //   this.profileService.getProfilePic(this.userId).subscribe((res) => {
-  //     console.log(res);
-  //     this.imageUrls = res.ProfilePicture; // Assuming the response contains the profile picture URL
-  //     console.log(this.imageUrls)
-  //   });
-  // }
-  
+ 
 
 
   getProfilePic() {

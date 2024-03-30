@@ -13,7 +13,7 @@ export class IncomeService {
   // Adding Income
   addIncome(data: any) {
     return this.http.post(
-      `${this.apiUrl}/api/v1/income/user/65fcfde89b5da09acbaff243`,
+      `${this.apiUrl}/api/v1/income/user/65fab73f1c860ff5e300098f`,
       data
     );
   }
@@ -21,14 +21,14 @@ export class IncomeService {
   // Fetching Income
   fetchIncome() {
     return this.http.get(
-      `${this.apiUrl}/api/v1/income/user/65fcfde89b5da09acbaff243`
+      `${this.apiUrl}/api/v1/income/user/65fab73f1c860ff5e300098f`
     );
   }
 
   // Deleting Income
   deleteIncome(_id: string) {
     return this.http.delete(
-      `${this.apiUrl}/api/v1/income/${_id}/user/65fcfde89b5da09acbaff243`
+      `${this.apiUrl}/api/v1/income/${_id}/user/65fab73f1c860ff5e300098f`
     );
   }
   // deleteIncome(_id: string) {

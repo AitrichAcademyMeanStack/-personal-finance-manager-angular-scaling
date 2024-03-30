@@ -24,14 +24,14 @@
 
     ngOnInit(): void {
       this.expenseForm = this.fb.group({
-        title: ['', [Validators.required]],
+        title: [''],
         amount: [
           '',
           [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)],
         ],
-        date: ['', [Validators.required]],
-        category: ['', [Validators.required]],
-        description: ['', [Validators.required]],
+        date: [''],
+        category: [''],
+        description: [''],
         customCategory: [''], // New form control for custom category
       });
       this.getExpense();

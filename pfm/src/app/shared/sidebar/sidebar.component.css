@@ -73,3 +73,17 @@
     font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
+.profile-pic-container {
+    width: 150px;
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 30%;
+
+  }
+  
+  .profile-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }

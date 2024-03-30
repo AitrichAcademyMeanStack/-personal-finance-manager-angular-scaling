@@ -4,6 +4,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { FinanceService } from '../home/services/finance.service';
 
+import { ProfileService } from '../home/services/profile.service';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { FinanceService } from '../home/services/finance.service';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+   
   ],
   exports:[
     SidebarComponent,

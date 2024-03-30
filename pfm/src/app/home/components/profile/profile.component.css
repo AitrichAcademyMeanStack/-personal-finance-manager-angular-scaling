@@ -1,31 +1,48 @@
 
 
         .edit{background-color: #F54670;
-              width: 200PX;
+              width: 100PX;
             height: 40px;
             border-radius: 30px;
-            color: aliceblue;}
+            color: aliceblue;
+          margin-top:20px;}
 
 
             .profile-pic-container {
-              width: 150px;
-              height: 150px; 
+              width: 200px;
+              height: 200px; 
               overflow: hidden;
               border-radius: 50%;
               margin-left: 30%;
 
             }
-            
+            .profilehead{
+          
+              margin-left: 230px;
+              font-weight: 100;
+            }
+
+
+
+
+
             .profile-pic {
-              width: 100%;
-              height: auto;
+              width: 180px;
+              height: 180px;
               border-radius: 50%;
+              object-fit: cover;
+              background: #fcf6f9;
+              border: 2px solid #FFFFFF;
+              padding: .2rem;
+              box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.06);
+              text-align: center;
             }
 
             .btnp {background-color: #F54670;
-              width: 120PX;
-            height: 30px;
+              width: 100PX;
+            height: 40px;
             border-radius: 30px;
             color: aliceblue;
-            margin-left: 30%;}
+            margin-top:10px;
+            }
             

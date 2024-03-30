@@ -31,9 +31,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="nav m-5">
         <div class="circle">
-          <img src="../../../assets/img/avatar.png" />
+          <img [src]="imageUrls" alt="Profile Picture" class="profile-pic">
           <div>
-            <h2>Jack</h2>
+            <h2>{{ user?.firstname }}</h2>
             
           </div>
         </div>
